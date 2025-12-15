@@ -1,0 +1,200 @@
+
+
+
+/* reset */
+	*,*:: before, *:: after{
+		box-sizing:border-box;
+		margin:0;
+		padding:0;
+	}
+
+/* base */
+	:root{
+		--primary: #98fb98; /*nice green */
+		--background: #0a0a0a; /*near black */
+		--text: #8fd3fe; /*a nice blue*/
+		   	}
+
+
+
+	body.aboutpage {
+		--primary: #98fb98; /*nice green */
+		--background: #0a0a0a; /*near black */
+		--text: #8fd3fe; /*a nice blue*/
+			}
+
+/* Home page */
+	body.homepage {
+		--primary: #00ff59;
+		--background: #050505;
+		--text: #e249ce;
+			}
+/* inspo page  */
+	body.inspopage {
+	--primary: #ffcc00;
+	--background: #0b0b15;
+	--text: #ffffff;
+			}
+
+/* fav games Page */
+	body.favepage {
+		--primary: #ff0000;
+		--background: #050505;
+		--text: #ffffff;
+			}
+
+/* Easter Eggs Page */
+	body.easterpage {
+		--primary: #ff0000;
+		--background: #ffffff;
+		--text: #0011ff;
+			}
+
+
+
+
+	html, body{
+		height: 100%;
+			}
+			
+	
+	body{
+		font-family: system-ui, sans-serif;
+		background: var(--background);
+		color: var(--text);
+			}
+
+	.container{
+		max-width:900px;
+		/*margin: 2rem auto; */ /*commented out to get a right align */
+		padding: 0 2rem;
+		position: relative;
+				}
+
+
+/*header */
+
+	.site-header{
+		display:flex;
+		justify-content: space-between;
+		align-items: center;
+		background: #1c1c1c;
+		padding: 0.75rem 1rem;
+		position:sticky;
+		z-index: 9999;
+		top: 0;
+		border-bottom: 3pm solid var(--primary);
+					}
+
+	.site-header-easterpage{
+			display:flex;
+		justify-content: space-between;
+		align-items: center;
+		background: #00ff4c;
+		padding: 0.75rem 1rem;
+		position:sticky;
+		z-index: 9999;
+		top: 0;
+		border-bottom: 3pm solid var(--primary);
+	}
+
+	.logo{
+		color: var(--primary);
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 1.2rem;
+			}
+		
+/* navigation links*/
+
+	.site-nav ul{
+		list-style: none;
+		display: flex;
+		gap: 1rem;
+					}
+
+
+	.site-nav a{
+		text-decoration: none;
+		color: var(--text);
+		padding: 0.5rem 0.75rem;
+		border-radius: 6px;
+		transition: background 0.3s, color 0.3s;
+				}
+		
+/* hover and active link styles */		
+				
+	.site-nav a:hover,	
+	.site-nav a.active{ 
+		background: var(--primary);
+		color: #000000;
+						}
+				
+/* mobile */
+	
+
+/* Hide the menu checkbox by default */
+	.menu-toggle{
+		display: none;
+			}
+ 		
+		
+/* The hamburger button */
+	.menu-btn{
+		display: none;
+		font-size: 2rem;
+		color: var(--text);
+		cursor: pointer;
+		user-select: none;
+			}
+	
+		
+/* Mobile styles — the mobile styles will always apear because i like how they look */
+	@media (max-width: 1000px) {
+		
+		/* Show the menu button on small screens */
+		
+		.menu-btn{
+			display: block;
+			position: sticky; 
+			Position: left 95%;
+				}
+			
+		
+/* Stack the navigation vertically and hide it by default */
+		.site-nav ul{
+			flex-direction: column;
+			position: absolute;
+			top: 60px;
+			right: 0;
+			background: #111624;
+			width: 200px;
+			padding: 1rem;
+			border-radius: 8px;
+			display: none;
+				}
+
+/* When the checkbox is checked, show the menu */
+		.menu-toggle:checked + .menu-btn + .site-nav ul{
+			display: flex;
+				}
+			
+	}
+
+
+
+/* These are for the easter egg page */
+	#moveBtn { 
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#secretInput {
+    margin-top: 20px;
+    padding: 8px;
+    font-size: 16px;
+}
+
